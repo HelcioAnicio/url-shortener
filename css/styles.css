@@ -1,5 +1,7 @@
+@import 'global.css';
+
 /* Header  */
 
 header {
-color: red;
+  color: black;
 }
