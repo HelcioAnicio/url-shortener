@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" href="css/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,23 +9,54 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URL Shortener</title>
-  
+
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
+
 <body bgcolor="black">
-  <header>
-    <div>
-      <h1>Shortly</h1>
-      <span>Features</span>
-      <span>Pricing</span>
-      <span>Resources</span>
-    </div>
-    
-    <div>
-      <h5>Login</h5>
-      <button>Sign Up</button>
-    </div>
+  <div id="container">
+    <header>
+      <div class="header-container">
+        <div class="logo-nav-wrapper">
+          <h1 class="logo">Shortly</h1>
+
+          <div class="nav-links">
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Resources</a>
+          </div>
+        </div>
+
+        <div class="account-buttons">
+          <button class="login-button">Login</button>
+          <button class="signin-button">Sign Up</button>
+        </div>
+
+        <button id="open-menu-button" class="button-hamburguer-menu">
+          <img src="./assets/icon-hamburguer-menu.svg" alt="open-menu">
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu">
+        <div class="buttons-wrapper">
+          <div class="account-buttons">
+            <button class="login-button">Login</button>
+            <button class="signin-button">Sign Up</button>
+          </div>
+
+          <button id="close-menu-button" class="button-close-menu">
+            <img src="./assets/icon-close-menu.svg" alt="links-menu">
+          </button>
+        </div>
+
+        <div class="nav-links">
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </div>
+      </div>
+  </div>
   </header>
   <main></main>
   <footer>
@@ -32,22 +64,42 @@
       <h2>Shortly</h2>
     </div>
     <div class="footer_features">
-      <a href="#"> <p>Link Shortening</p> </a>
-      <a href="#"> <p>Branded Links</p> </a>
-      <a href="#"> <p>Analytics</p> </a>
+      <a href="#">
+        <p>Link Shortening</p>
+      </a>
+      <a href="#">
+        <p>Branded Links</p>
+      </a>
+      <a href="#">
+        <p>Analytics</p>
+      </a>
     </div> <br>
 
     <div class="footer_resources">
-      <a href="#"> <p>Blog</p> </a>
-      <a href="#"> <p>Developers</p> </a>
-      <a href="#"> <p>Support</p> </a>
+      <a href="#">
+        <p>Blog</p>
+      </a>
+      <a href="#">
+        <p>Developers</p>
+      </a>
+      <a href="#">
+        <p>Support</p>
+      </a>
     </div> <br>
 
     <div class="footer_company">
-      <a href="#"> <p>About</p> </a>
-      <a href="#"> <p>Our Team</p> </a>
-      <a href="#"> <p>Carreers</p> </a>
-      <a href="#"> <p>Contact</p> </a>
+      <a href="#">
+        <p>About</p>
+      </a>
+      <a href="#">
+        <p>Our Team</p>
+      </a>
+      <a href="#">
+        <p>Carreers</p>
+      </a>
+      <a href="#">
+        <p>Contact</p>
+      </a>
     </div> <br>
 
     <div class="footer_socialmedias">
@@ -58,6 +110,9 @@
     </div>
 
   </footer>
+
+  </div>
 </body>
 <script src="index.js"></script>
+
 </html>
