@@ -4,11 +4,11 @@
 
 @keyframes open-menu {
   0% {
-    transform: translateX(100px);
+    transform: translateY(-100px);
   }
 
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -140,6 +140,13 @@ header .mobile-menu .nav-links {
 
 header .mobile-menu .nav-links a {
   font-size: 2.5rem;
+}
+
+/* MAIN */
+
+main {
+  height: 600px;
+  border: 1px solid red;
 }
 
 /* FOOTER */
