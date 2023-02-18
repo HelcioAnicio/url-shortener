@@ -144,7 +144,7 @@ header .mobile-menu .nav-links a {
 /* MAIN */
 
 main {
-  height: 600px;
+  /* height: 600px; */
   border: 1px solid red;
 }
 
@@ -152,8 +152,8 @@ main {
 
 footer { 
   background-color: var(--very-dark-violet);
-  border: 1px solid white;
   box-sizing: border-box;
+  padding: 2rem 0 2rem 0;
   width: 100%;
   /* height: 400px; */
   display: flex;
@@ -162,12 +162,8 @@ footer {
   text-align: center;
 }
 
-footer .div-logo, .div-features, .div-resources, .div-company, .div-social-icons {
-  width: 40%;
-}
-
 footer .div-logo  {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: white;
   padding: 3rem 0 3rem 0;
 }
@@ -184,11 +180,6 @@ footer p {
   color: var(--grayish-violet);
   padding: .2rem;
   margin-top: .5rem;
-}
-
-footer .div-social-icons {
-  border: 1px solid;
-  width: 100%;
 }
 
 footer img {
@@ -230,4 +221,31 @@ footer img {
     display: flex;
     gap: 2rem;
   }
+
+
+  /* FOOTER */
+  footer { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    text-align: left;
+    padding: 2rem 0 2rem 0;
+  }
+
+  footer .div-logo  {
+    padding: 0 2rem 0 2rem;
+  }
+  
+  footer p {
+    margin-top: 1rem;
+  }
+  
+  footer img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: .5rem .5rem .5rem .5rem;
+  }
+  
+
 }
