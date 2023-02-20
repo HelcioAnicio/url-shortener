@@ -148,16 +148,17 @@ main {
   border: 1px solid red;
 }
 
-/* FOOTER */
 
+
+/* FOOTER */
 footer { 
   background-color: var(--very-dark-violet);
   box-sizing: border-box;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 1rem 2rem 1rem;
   width: 100%;
-  /* height: 400px; */
   display: flex;
   flex-direction: column;
+  gap: 3rem;
   align-items: center;
   text-align: center;
 }
@@ -165,28 +166,38 @@ footer {
 footer .div-logo  {
   font-size: 1.3rem;
   color: white;
-  padding: 3rem 0 3rem 0;
+  padding: 1rem 0 1rem 0;
 }
 
-
-footer h4 {
+footer .content-topic {
   cursor: pointer;
   color: white;
-  padding: .8rem 0 .8rem 0;
+  padding: 1rem 0 0 0;
+
 }
 
 footer p {
   cursor: pointer;
   color: var(--grayish-violet);
-  padding: .2rem;
-  margin-top: .5rem;
+  margin-top: 1.5rem;
+}
+
+footer div a:first-of-type p:first-of-type{
+  margin-top: 1rem;
+}
+
+.div-social-icons {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 0 2rem 0;
 }
 
 footer img {
   width: 2rem;
   height: 2rem;
-  margin: 3rem 1rem 3rem 1rem;
 }
+
+
 
 /* MEDIA QUERIES */
 
@@ -228,6 +239,7 @@ footer img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: initial;
     align-items:flex-start;
     text-align: left;
     padding: 2rem 0 2rem 0;
@@ -240,11 +252,10 @@ footer img {
   footer p {
     margin-top: 1rem;
   }
-  
+
   footer img {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: .5rem .5rem .5rem .5rem;
+    width: 2rem;
+    height: 2rem;
   }
   
 
