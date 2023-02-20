@@ -20,8 +20,12 @@
   --dark-blue: hsl(255, 11%, 22%);
   --very-dark-violet: hsl(260, 8%, 14%);
 
+  /* Spacing */
+
+  --container-padding: 8rem;
+
   /* ### Typograhpy */
-  --font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 html {
