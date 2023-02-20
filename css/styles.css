@@ -194,12 +194,16 @@ footer .div-social-icons {
   gap: 1.5rem;
 }
 
-footer .div-social-icons img {
+footer .div-social-icons a svg {
   width: 1.5rem;
   height: 1.5rem;
+  fill: white;
+  transition: 300ms ease-out;
 }
 
-
+footer .div-social-icons a svg:hover {
+  fill: var(--cyan);
+}
 
 /* MEDIA QUERIES */
 
@@ -258,5 +262,5 @@ footer .div-social-icons img {
   footer .div-social-icons {
     flex-direction: row;
   }
-  
+
 }
