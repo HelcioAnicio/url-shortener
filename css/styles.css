@@ -144,7 +144,7 @@ header .mobile-menu .nav-links a {
 /* MAIN */
 
 main {
-  height: 600px;
+  /* height: 600px; */
   border: 1px solid red;
 }
 
@@ -175,6 +175,7 @@ footer .div-logo {
 footer .content-topic {
   cursor: pointer;
   color: white;
+
 }
 
 footer p {
@@ -196,12 +197,8 @@ footer .div-social-icons {
 footer .div-social-icons img {
   width: 1.5rem;
   height: 1.5rem;
-  color: red;
 }
 
-footer a p:hover, footer a:hover {
-  color: var(--cyan);
-}
 
 
 /* MEDIA QUERIES */
