@@ -22,7 +22,7 @@
 
   /* Spacing */
 
-  --container-padding: 8rem;
+  --container-padding: 4rem;
 
   /* ### Typograhpy */
   font-size: 1.125rem;
@@ -36,6 +36,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: transparent;
+  overflow-x: hidden;
 }
 
 #container {
@@ -47,7 +48,9 @@ a {
 }
 
 button {
-  all: unset;
+  font-size: 1rem;
+  border: none;
+  background: none;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
 }
@@ -59,6 +62,16 @@ img {
 
 ul {
   list-style: none;
+}
+
+input {
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
+::placeholder {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* 
