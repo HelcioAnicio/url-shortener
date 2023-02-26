@@ -88,6 +88,8 @@ header .mobile-menu {
   right: 0;
   bottom: 0;
   background-color: white;
+  z-index: 1000;
+  overflow-y: hidden;
   transition: all 300ms ease-out;
 }
 
@@ -185,13 +187,13 @@ main .hero-container .hero-wrapper p {
   margin-bottom: .5rem;
 }
 
-main .hero-container .hero-wrapper button {
+main .hero-container .hero-wrapper .get-started-btn {
   color: white;
   background-color: var(--cyan);
   border-radius: 9999px;
   padding: 0.5rem 1.5rem;
   transition: 300ms all ease-out;
-  margin-bottom: 100px;
+  margin-bottom: 2rem;
 }
 
 main .hero-container .hero-wrapper button:hover {
@@ -222,18 +224,20 @@ main .hero-container .hero-wrapper #shorten-link input {
 main .hero-container .hero-wrapper #shorten-link input::placeholder {
   border-radius: 5px;
   font-size: .8rem;
-  width: 100%;
+  min-width: 100%;
 }
 
 main .hero-container .hero-wrapper #shorten-link button {
+  color: white;
+  background-color: var(--cyan);
+  padding: 0.5rem 1.5rem;
+  transition: 300ms all ease-out;
   border-radius: 5px;
   padding: .6rem;
   min-width: 100%;
   font-weight: black;
   text-align: center;
 }
-
-
 
 main .main-section {
   background-color: var(--gray);
@@ -355,12 +359,6 @@ main .main-container-footer-button {
 main .main-container-footer-button:hover {
   filter: brightness(1.050);
 }
-
-
-
-
-
-
 
 /* FOOTER */
 

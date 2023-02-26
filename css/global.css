@@ -35,7 +35,6 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: transparent;
-  overflow-x: hidden;
 }
 
 #container {
