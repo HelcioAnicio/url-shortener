@@ -82,11 +82,9 @@ header .mobile-menu {
   padding-block: 1rem;
   padding-inline: 2rem;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   background-color: white;
   z-index: 1000;
   overflow-y: hidden;
@@ -282,7 +280,8 @@ main .main-container-boxes {
   z-index: 3;
 }
 
-main .main-container-boxes:nth-child(2)::before, .main-container-boxes:nth-child(3)::before {
+main .main-container-boxes:nth-child(2)::before,
+.main-container-boxes:nth-child(3)::before {
   content: "";
   background-color: var(--cyan);
   width: 7px;
@@ -291,7 +290,7 @@ main .main-container-boxes:nth-child(2)::before, .main-container-boxes:nth-child
   position: absolute;
   top: -100px;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   z-index: 1;
 }
 
