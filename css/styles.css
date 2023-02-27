@@ -242,37 +242,37 @@ main .hero-container .hero-wrapper #shorten-link button {
 main .main-section {
   background-color: var(--gray);
   width: 100%;
+  padding-top: 10%;
+}
+
+main .main-section-informations {
+  margin-top: 100px;
+  /* padding-inline: 1rem; */
+}
+
+main .main-section-informations h2 {
+  color: var(--very-dark-violet);
+  text-align: center;
+}
+
+main .main-section-informations p {
+  color: white;
+  text-align: center;
+  width: 90%;
+  max-width: 290px;
+  margin: 5% auto;
 }
 
 main .main-container {
-  padding: 10% 0 70px 0;
+  padding: 0 0 70px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-main .main-container-informations {
-  margin-top: 100px;
-  padding-inline: 1rem;
-}
-
-main .main-container-informations h2 {
-  color: var(--very-dark-violet);
-  text-align: center;
-}
-
-main .main-container-informations p {
-  color: var(--grayish-violet);
-  text-align: center;
-  border: 1px solid;
-  width: 100%;
-  /* width: 290px; */
-  margin: 0 auto;
-}
-
 main .main-container-boxes {
   position: relative;
-  margin-top: 6rem;
+  margin-top: 100px;
   width: 90%;
   max-width: 300px;
   padding-bottom: 2rem;
@@ -282,25 +282,24 @@ main .main-container-boxes {
   z-index: 3;
 }
 
-/* main .main-container-boxes-blue {
+main .main-container-boxes:nth-child(2)::before, .main-container-boxes:nth-child(3)::before {
+  content: "";
   background-color: var(--cyan);
   width: 7px;
-  height: 100px;
+  height: 130px;
+  display: inline-block;
   position: absolute;
-  z-index: 1;
-  margin: 0 auto;
-  top: -40%;
+  top: -100px;
   left: 50%;
   transform: translate(-50%,0);
-} */
+  z-index: 1;
+}
 
 main .main-container-boxes-header {
   padding: 1rem;
-  /* border: 1px solid; */
   margin: 0 auto;
   width: 100%;
 }
-
 
 main .main-container-boxes-header-img {
   width: 80px;
@@ -319,7 +318,6 @@ main .main-container-boxes-header-img img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40%;
-  /* border: 1px solid green; */
 }
 
 main .main-container-boxes-header h3 {
@@ -333,19 +331,19 @@ main .main-container-boxes-content p {
   padding-inline: 1.5rem;
 }
 
-main .main-container-footer {
+main .main-footer {
   padding: 2.5rem .5rem 1.5rem .5rem;
   width: 100%;
   background: var(--dark-violet) url('../assets/bg-shorten-mobile.svg') no-repeat top right;
 }
 
-main .main-container-footer h3 {
+main .main-footer h3 {
   color: white;
   text-align: center;
   width: 100%;
 }
 
-main .main-container-footer-button {
+main .main-footer-button {
   color: white;
   display: block;
   margin: 25px auto;
@@ -356,12 +354,14 @@ main .main-container-footer-button {
 }
 
 
-main .main-container-footer-button:hover {
+main .main-footer-button:hover {
   filter: brightness(1.050);
 }
 
-/* FOOTER */
 
+
+
+/* FOOTER */
 footer {
   background-color: var(--very-dark-violet);
   padding-inline: 2rem;
