@@ -474,3 +474,9 @@ footer .div-social-icons a svg:hover {
   }
 
 }
+
+@media(max-width:340px) {
+  header .account-buttons .signin-button {
+    padding: 0.5rem 1rem;
+  }
+}
