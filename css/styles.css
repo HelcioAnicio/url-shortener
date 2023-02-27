@@ -155,6 +155,7 @@ header .mobile-menu .nav-links a {
 /* main .hero-container {} */
 
 main .hero {
+  position: relative;
   padding-inline: 2rem;
 }
 
@@ -198,7 +199,7 @@ main .hero-container .hero-wrapper button:hover {
   filter: brightness(1.050);
 }
 
-main .hero-container .hero-wrapper #shorten-link {
+main #shorten-link {
   position: absolute;
   top: 100%;
   display: flex;
@@ -213,19 +214,19 @@ main .hero-container .hero-wrapper #shorten-link {
   background: var(--dark-violet) url('../assets/bg-shorten-mobile.svg') no-repeat top right;
 }
 
-main .hero-container .hero-wrapper #shorten-link input {
+main #shorten-link input {
   border-radius: 5px;
   padding: .6rem;
   width: 100%;
 }
 
-main .hero-container .hero-wrapper #shorten-link input::placeholder {
+main input::placeholder {
   border-radius: 5px;
   font-size: .8rem;
   min-width: 100%;
 }
 
-main .hero-container .hero-wrapper #shorten-link button {
+main #shorten-link button {
   color: white;
   background-color: var(--cyan);
   padding: 0.5rem 1.5rem;
@@ -235,6 +236,10 @@ main .hero-container .hero-wrapper #shorten-link button {
   min-width: 100%;
   font-weight: black;
   text-align: center;
+}
+
+main .hero>#shorten-link {
+  display: none;
 }
 
 main .main-section {
@@ -357,9 +362,6 @@ main .main-footer-button:hover {
   filter: brightness(1.050);
 }
 
-
-
-
 /* FOOTER */
 footer {
   background-color: var(--very-dark-violet);
@@ -449,6 +451,59 @@ footer .div-social-icons a svg:hover {
     gap: 2rem;
   }
 
+  main .hero-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 100px;
+    position: relative;
+  }
+
+  main .hero-container .hero-wrapper #shorten-link {
+    display: none;
+  }
+
+  main .hero-container .hero-wrapper {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  main .hero-container .hero-ilustration {
+    width: 35rem;
+  }
+
+  main .hero-container .hero-wrapper h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    text-align: start;
+  }
+
+  main .hero-container .hero-wrapper p {
+    text-align: start;
+  }
+
+  main .hero>#shorten-link {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    max-width: 70%;
+    left: 15%;
+    top: 107%;
+  }
+
+  main .hero>#shorten-link button {
+    min-width: 10rem;
+    /* height: 2rem; */
+  }
+
+  main .hero>#shorten-link input {
+    height: 2.6rem;
+  }
+
 
   /* FOOTER */
   footer .footer-container {
@@ -472,7 +527,6 @@ footer .div-social-icons a svg:hover {
   footer .div-social-icons {
     flex-direction: row;
   }
-
 }
 
 @media(max-width:340px) {
