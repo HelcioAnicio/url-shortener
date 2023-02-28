@@ -1,7 +1,7 @@
 @import 'global.css';
 
-/* ANIMATIONS */
 
+/* ANIMATIONS */
 @keyframes open-menu {
   0% {
     transform: translateY(-100px);
@@ -143,12 +143,7 @@ header .mobile-menu .nav-links a {
   font-size: 2.5rem;
 }
 
-/* MAIN */
-
-/* main {
-  height: 600px;
-  border: 1px solid red;
-} */
+/* -- MAIN -- */
 
 /* main .hero {} */
 
@@ -250,7 +245,6 @@ main .main-section {
 
 main .main-section-informations {
   margin-top: 100px;
-  /* padding-inline: 1rem; */
 }
 
 main .main-section-informations h2 {
@@ -271,6 +265,11 @@ main .main-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  min-width: 315px;
+  width: 50%;
+  max-width: 350px;
+  margin: 0 auto;
+
 }
 
 main .main-container-boxes {
@@ -282,7 +281,7 @@ main .main-container-boxes {
   background-color: white;
   text-align: center;
   border-radius: 2%;
-  z-index: 3;
+  z-index: 2;
 }
 
 main .main-container-boxes:nth-child(2)::before,
@@ -311,7 +310,7 @@ main .main-container-boxes-header-img {
   border-radius: 100%;
   position: relative;
   top: -60px;
-  z-index: 4;
+  z-index: 3;
   margin: 0 auto;
   background-color: var(--dark-violet);
 }
@@ -357,12 +356,12 @@ main .main-footer-button {
   transition: 300ms all ease-out;
 }
 
-
 main .main-footer-button:hover {
   filter: brightness(1.050);
 }
 
-/* FOOTER */
+
+/* -- FOOTER -- */
 footer {
   background-color: var(--very-dark-violet);
   padding-inline: 2rem;
@@ -417,9 +416,26 @@ footer .div-social-icons a svg:hover {
   fill: var(--cyan);
 }
 
-/* MEDIA QUERIES */
 
-@media (min-width: 768px) {
+/* ### MEDIA QUERIES */
+  /*  max-width: 340px  */
+@media(max-width:340px) {
+  header .account-buttons .signin-button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+  /*  min-width: 380px  */
+@media screen and (min-width: 380px) and (min-height: 640px) {
+  html, body {
+    font-size: 21px;
+  }
+}
+
+
+  /*  MIN-WIDTH: 760px  */
+@media (min-width: 760px) {
+    /* -- HEADER 760px -- */
   #container {
     padding-inline: var(--container-padding);
   }
@@ -451,6 +467,9 @@ footer .div-social-icons a svg:hover {
     gap: 2rem;
   }
 
+
+
+  /* -- MAIN 760px -- */
   main .hero-container {
     display: flex;
     flex-direction: row-reverse;
@@ -504,8 +523,19 @@ footer .div-social-icons a svg:hover {
     height: 2.6rem;
   }
 
-
-  /* FOOTER */
+  main .main-section-informations {
+    width: 100%;
+  }
+  
+  main .main-section-informations p {
+    margin: 3% auto;
+    width: 60%;
+    max-width: 500px;
+  }
+  
+  
+  /* -- FOOTER 760px -- */
+/* FOOTER */
   footer .footer-container {
     display: flex;
     flex-direction: row;
@@ -523,14 +553,46 @@ footer .div-social-icons a svg:hover {
   }
 }
 
+
+
+/*  MIN-WIDTH: 950px  */
 @media screen and (min-width:950px) {
+  /* -- FOOTER 950px -- */
   footer .div-social-icons {
     flex-direction: row;
   }
 }
 
-@media(max-width:340px) {
-  header .account-buttons .signin-button {
-    padding: 0.5rem 1rem;
+/*  MIN-WIDTH: 1280px and MIN-WIDTH: 640px  */
+@media screen and (min-width: 1280px) and (min-height: 640px){
+  /* -- MAIN 1280px -- */
+  main .main-section {
+    padding-bottom: 160px;
   }
+  
+  main .main-section-informations {
+    margin-top: 50px;
+  }
+  
+  main .main-container {
+    max-width: initial;
+    gap: 100px;
+    width: 100%;
+  }
+ 
+  main .main-container-boxes:nth-child(2)::before, .main-container-boxes:nth-child(3)::before {
+    width: 100px;
+    height: 7px;
+    top: 40%;
+    left: -100px;
+    transform: translate(0,-50%);
+  }
+  
+  main .main-container-boxes:nth-child(2) {
+    top: 70px;
+  }
+
+  main .main-container-boxes:nth-child(3) {
+    top: 140px;
+  } 
 }
