@@ -82,11 +82,9 @@ header .mobile-menu {
   padding-block: 1rem;
   padding-inline: 2rem;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   background-color: white;
   z-index: 1000;
   overflow-y: hidden;
@@ -152,6 +150,7 @@ header .mobile-menu .nav-links a {
 /* main .hero-container {} */
 
 main .hero {
+  position: relative;
   padding-inline: 2rem;
 }
 
@@ -195,7 +194,7 @@ main .hero-container .hero-wrapper button:hover {
   filter: brightness(1.050);
 }
 
-main .hero-container .hero-wrapper #shorten-link {
+main #shorten-link {
   position: absolute;
   top: 100%;
   display: flex;
@@ -210,19 +209,19 @@ main .hero-container .hero-wrapper #shorten-link {
   background: var(--dark-violet) url('../assets/bg-shorten-mobile.svg') no-repeat top right;
 }
 
-main .hero-container .hero-wrapper #shorten-link input {
+main #shorten-link input {
   border-radius: 5px;
   padding: .6rem;
   width: 100%;
 }
 
-main .hero-container .hero-wrapper #shorten-link input::placeholder {
+main input::placeholder {
   border-radius: 5px;
   font-size: .8rem;
   min-width: 100%;
 }
 
-main .hero-container .hero-wrapper #shorten-link button {
+main #shorten-link button {
   color: white;
   background-color: var(--cyan);
   padding: 0.5rem 1.5rem;
@@ -232,6 +231,10 @@ main .hero-container .hero-wrapper #shorten-link button {
   min-width: 100%;
   font-weight: black;
   text-align: center;
+}
+
+main .hero>#shorten-link {
+  display: none;
 }
 
 main .main-section {
@@ -281,7 +284,8 @@ main .main-container-boxes {
   z-index: 2;
 }
 
-main .main-container-boxes:nth-child(2)::before, .main-container-boxes:nth-child(3)::before {
+main .main-container-boxes:nth-child(2)::before,
+.main-container-boxes:nth-child(3)::before {
   content: "";
   background-color: var(--cyan);
   width: 7px;
@@ -290,7 +294,7 @@ main .main-container-boxes:nth-child(2)::before, .main-container-boxes:nth-child
   position: absolute;
   top: -100px;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   z-index: 1;
 }
 
@@ -413,8 +417,15 @@ footer .div-social-icons a svg:hover {
 }
 
 
-
 /* ### MEDIA QUERIES */
+  /*  max-width: 340px  */
+@media(max-width:340px) {
+  header .account-buttons .signin-button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+  /*  min-width: 380px  */
 @media screen and (min-width: 380px) and (min-height: 640px) {
   html, body {
     font-size: 21px;
@@ -456,7 +467,62 @@ footer .div-social-icons a svg:hover {
     gap: 2rem;
   }
 
+
+
   /* -- MAIN 760px -- */
+  main .hero-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 100px;
+    position: relative;
+  }
+
+  main .hero-container .hero-wrapper #shorten-link {
+    display: none;
+  }
+
+  main .hero-container .hero-wrapper {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  main .hero-container .hero-ilustration {
+    width: 35rem;
+  }
+
+  main .hero-container .hero-wrapper h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    text-align: start;
+  }
+
+  main .hero-container .hero-wrapper p {
+    text-align: start;
+  }
+
+  main .hero>#shorten-link {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    max-width: 70%;
+    left: 15%;
+    top: 107%;
+  }
+
+  main .hero>#shorten-link button {
+    min-width: 10rem;
+    /* height: 2rem; */
+  }
+
+  main .hero>#shorten-link input {
+    height: 2.6rem;
+  }
+
   main .main-section-informations {
     width: 100%;
   }
@@ -467,7 +533,9 @@ footer .div-social-icons a svg:hover {
     max-width: 500px;
   }
   
+  
   /* -- FOOTER 760px -- */
+/* FOOTER */
   footer .footer-container {
     display: flex;
     flex-direction: row;
@@ -494,7 +562,6 @@ footer .div-social-icons a svg:hover {
     flex-direction: row;
   }
 }
-
 
 /*  MIN-WIDTH: 1280px and MIN-WIDTH: 640px  */
 @media screen and (min-width: 1280px) and (min-height: 640px){
@@ -528,5 +595,4 @@ footer .div-social-icons a svg:hover {
   main .main-container-boxes:nth-child(3) {
     top: 140px;
   } 
-
 }
