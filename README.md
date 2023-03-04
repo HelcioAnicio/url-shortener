@@ -102,6 +102,6 @@ https://stackoverflow.com/
 - Linkedin - https://www.linkedin.com/in/helcio-anicio/ 
 - Vercel - https://vercel.com/helcioanicio
 
-<--
+<!--
 ## Acknowledgments
  -->
