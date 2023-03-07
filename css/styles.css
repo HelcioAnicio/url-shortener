@@ -1,5 +1,9 @@
 @import 'global.css';
 
+.link-item {
+  color: var(--cyan);
+}
+
 
 /* ANIMATIONS */
 @keyframes open-menu {
@@ -237,11 +241,54 @@ main .hero>#shorten-link {
   display: none;
 }
 
+
+
+
 main .main-section {
   background-color: var(--gray);
   width: 100%;
   padding-top: 10%;
 }
+
+#wrapper-links {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  padding-inline: 2rem;
+}
+#wrapper-links .link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  border-radius: 5px;
+  padding: .6rem;
+  width: 100%;
+}
+
+#wrapper-links .link-container .link-item:first-child {
+  color: black;
+}
+
+#wrapper-links .link-container .CopyLinks {
+  color: white;
+  display: inline;
+  /* margin: 0 auto; */
+  background-color: var(--cyan);
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  transition: 300ms all ease-out;
+}
+
+.link-container {
+  width: 80%;
+  background-color: white;
+  padding: 5px;
+  margin-top: 10px;
+}
+
 
 main .main-section-informations {
   margin-top: 100px;
