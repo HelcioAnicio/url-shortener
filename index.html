@@ -72,24 +72,23 @@
 
 
           <div id="shorten-link">
-            <input placeholder="Shorten a link here..." type="text">
-            <button>Shorten It!</button>
+            <input name="link-input" id="link-input-mobile" placeholder="Shorten a link here..." type="text">
+            <button onclick="shorteningLinkMobile()">Shorten It!</button>
           </div>
 
         </div>
-
-
-
       </div>
 
       <div id="shorten-link">
-        <input placeholder="Shorten a link here..." type="text">
-        <button>Shorten It!</button>
+        <input name="link-input" id="link-input-desktop" placeholder="Shorten a link here..." type="text">
+        <button onclick="shorteningLinkDesktop()" id='btn-shorten'>Shorten It!</button>
       </div>
     </section>
 
     <section class="main-section">
-
+      <div id='wrapper-links'>
+        
+      </div>
       <div class="main-section-informations">
         <h2>Advanced Statistics</h2>
         <p>Track how your links are performing across the web with our dvanced statistics dashboard.</p>
