@@ -22,13 +22,10 @@ closeMenuButton.addEventListener('click', () => {
   }
 })
 
-function copyToClipboard(text) {
-  navigator.clipboard.writeText('text')
-  alert('Copied!')
+ async function copyToClipboard(text) {
+  await navigator.clipboard.readText(text)
+  alert('copy')
 }
-
- 
-
 
 function shorteningLinkDesktop() {
   if (linkInputDesktop.value == '') {
@@ -40,52 +37,44 @@ function shorteningLinkDesktop() {
     .then(data => {
 
      const link = data?.result.short_link3
+
+      const stringM = String(linkInputDesktop.value).length < String(linkInputDesktop.value).slice(0, 20)
+      
+
         wrapperLinks.innerHTML+=`
         <div class="link-container">
-        <a class='link-item' href=${linkInputDesktop.value}> ${linkInputDesktop.value} </a>
+        <a class='link-item' href=${stringM}> ${String(linkInputDesktop.value)} </a>
           <div class="DivResult">
             <a class='link-item' href=${link}> ${link} </a>
-            <button onclick="copyToClipboard()" class="CopyLinks">Copy</button>
+            <button onclick="copyToClipboard(${link})" class="CopyLinks">Copy</button>
           </div>
         </div>
         `
-
-          async function copyToClipboard() {
-
-        await navigator.clipboard.writeText(link)
-        alert('Copied!')
-      }
     })
 }
 
 function shorteningLinkMobile() {
     if (linkInputMobile.value == '') {
     alert('Type or paste a link')
-}
+    }
+  
  fetch(api + linkInputMobile.value)
  .then(res => res.json())
-  .then(data => {
-      links.push(data?.result.short_link3)
+   .then(data => {
+    const link = data?.result.short_link3
 
-      links.map((link) => {
-       anchorLink.innerHTML = link
-       anchorLink.href = link
-       anchorLink.classList = 'link-item'
-        
-       wrapperLinks.appendChild(anchorLink)
-    })})
+    const stringM = String(linkInputMobile.value).slice(0, 20)
+
+
+     
+        wrapperLinks.innerHTML+=`
+        <div class="link-container">
+        <a class='link-item' href=${linkInputMobile.value}> ${stringM}</a>
+          <div class="DivResult">
+            <a class='link-item' href=${link}> ${link} </a>
+            <button onclick="copyToClipboard(${link && String(link)})" class="CopyLinks">Copy</button>
+          </div>
+        </div>
+        `
+     })
 }
-
-
-// listaprodutos.innerHTML+=`
-//   <h3>`+val.nome+
-// `
-
-// <form action="">
-//   <input type="text" id="name" name="name">
-//   <input type="submit" value="Enviar">
-// </form>
-
-// var input = document.querySelector("#name");
-// var texto = input.value;
-// console.log(texto);
