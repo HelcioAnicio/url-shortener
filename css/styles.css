@@ -241,54 +241,68 @@ main .hero>#shorten-link {
   display: none;
 }
 
-
-
-
 main .main-section {
-  background-color: var(--gray);
+  background-color: #EFF1F7;
   width: 100%;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
-#wrapper-links {
-  width: 80%;
-  margin: 0 auto;
+main #wrapper-links {
+  width: 95%;
+  margin-inline: auto;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border: 1px solid red;
   padding-inline: 2rem;
 }
-#wrapper-links .link-container {
+
+main #wrapper-links .link-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center ;
+  flex-wrap: wrap;
+  background-color: white;
   border-radius: 5px;
-  padding: .6rem;
+  margin-inline: auto;
+  margin-top: 20px;
   width: 100%;
+  padding: 10px;
+  overflow-x: hidden;
 }
 
-#wrapper-links .link-container .link-item:first-child {
+main #wrapper-links .link-container > .link-item {
+  position: relative;
   color: black;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
-#wrapper-links .link-container .CopyLinks {
+main #wrapper-links .link-container > .link-item::before {
+  content: "";
+  background-color: var(--gray);
+  width: 110%;
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+  left: -20px;
+  z-index: 1;
+}
+
+main #wrapper-links .link-container .DivResult {
+  width: 100%;
+  margin-top: 15px;
+
+}
+
+main #wrapper-links .link-container .DivResult .CopyLinks {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
   color: white;
-  display: inline;
-  /* margin: 0 auto; */
   background-color: var(--cyan);
-  border-radius: 9999px;
+  border-radius: 5px;
   padding: 0.5rem 1.5rem;
   transition: 300ms all ease-out;
 }
-
-.link-container {
-  width: 80%;
-  background-color: white;
-  padding: 5px;
-  margin-top: 10px;
-}
-
 
 main .main-section-informations {
   margin-top: 100px;
@@ -300,7 +314,7 @@ main .main-section-informations h2 {
 }
 
 main .main-section-informations p {
-  color: white;
+  color: var(--grayish-violet) ;
   text-align: center;
   width: 90%;
   max-width: 290px;
@@ -473,7 +487,7 @@ footer .div-social-icons a svg:hover {
 }
 
   /*  min-width: 380px  */
-@media screen and (min-width: 380px) and (min-height: 640px) {
+@media screen and (min-width: 380px) and (min-height: 630px) {
   html, body {
     font-size: 21px;
   }
@@ -481,7 +495,7 @@ footer .div-social-icons a svg:hover {
 
 
   /*  MIN-WIDTH: 760px  */
-@media (min-width: 760px) {
+@media (min-width: 766px){
     /* -- HEADER 760px -- */
   #container {
     padding-inline: var(--container-padding);
@@ -519,7 +533,6 @@ footer .div-social-icons a svg:hover {
   /* -- MAIN 760px -- */
   main .hero-container {
     display: flex;
-    flex-direction: row-reverse;
     align-items: start;
     justify-content: center;
     gap: 1rem;
@@ -570,6 +583,22 @@ footer .div-social-icons a svg:hover {
     height: 2.6rem;
   }
 
+
+  main #wrapper-links {
+    width: 95%;
+    margin-inline: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-inline: 2rem;
+  }
+
+  main #wrapper-links .link-container {
+    width: 81%;
+  }
+
+
   main .main-section-informations {
     width: 100%;
   }
@@ -579,7 +608,6 @@ footer .div-social-icons a svg:hover {
     width: 60%;
     max-width: 500px;
   }
-  
   
   /* -- FOOTER 760px -- */
 /* FOOTER */
@@ -601,7 +629,6 @@ footer .div-social-icons a svg:hover {
 }
 
 
-
 /*  MIN-WIDTH: 950px  */
 @media screen and (min-width:950px) {
   /* -- FOOTER 950px -- */
@@ -616,6 +643,72 @@ footer .div-social-icons a svg:hover {
   main .main-section {
     padding-bottom: 160px;
   }
+
+  main .hero-container {
+flex-direction: row-reverse;
+  }
+
+  main #wrapper-links {
+    width: 100%;
+    margin-inline: auto;
+    margin-top: initial;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-inline: 2rem;
+  }
+
+  main #wrapper-links .link-container {
+    background-color: white;
+    border-radius: 5px;
+    margin-inline: auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: initial;
+  }
+
+  main #wrapper-links .link-container:nth-of-type(1) {
+    margin-top: 0;
+  }
+
+  main #wrapper-links .link-container > .link-item {
+    position: initial;
+    display: inline-block;
+    color: black;
+    width: initial;
+    margin-bottom: 5px;
+  }
+
+  main #wrapper-links .link-container > .link-item::before {
+    display: none;
+  }
+
+  main #wrapper-links .link-container .DivResult {
+    width: initial;
+    display: flex;
+    margin-top: initial;
+    align-items: center;
+
+  }
+
+  main #wrapper-links .link-container .DivResult .CopyLinks {
+    display: inline-block;
+    width: initial;
+    margin-top: initial;
+    color: white;
+    background-color: var(--cyan);
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    margin-left: 10px;
+    transition: 300ms all ease-out;
+  }
+
+
   
   main .main-section-informations {
     margin-top: 50px;
