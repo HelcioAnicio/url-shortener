@@ -22,9 +22,9 @@ closeMenuButton.addEventListener('click', () => {
   }
 })
 
- async function copyToClipboard(text) {
-  await navigator.clipboard.readText(text)
-  alert('copy')
+async function copyToClipboard(text) {
+  await navigator.clipboard.writeText(text)
+  alert(`Copied: ${text}`)
 }
 
 function shorteningLinkDesktop() {
@@ -36,17 +36,17 @@ function shorteningLinkDesktop() {
     .then(res => res.json())
     .then(data => {
 
-     const link = data?.result.short_link3
+      const link = data?.result.short_link3
 
       const stringM = String(linkInputDesktop.value).length < String(linkInputDesktop.value).slice(0, 20)
-      
 
-        wrapperLinks.innerHTML+=`
+
+      wrapperLinks.innerHTML += `
         <div class="link-container">
         <a class='link-item' href=${stringM}> ${String(linkInputDesktop.value)} </a>
           <div class="DivResult">
-            <a class='link-item' href=${link}> ${link} </a>
-            <button onclick="copyToClipboard(${link})" class="CopyLinks">Copy</button>
+            <a class='link-item' href='${link}'> ${link} </a>
+            <button onclick="copyToClipboard('${link}')" class="CopyLinks">Copy</button>
           </div>
         </div>
         `
@@ -54,20 +54,20 @@ function shorteningLinkDesktop() {
 }
 
 function shorteningLinkMobile() {
-    if (linkInputMobile.value == '') {
+  if (linkInputMobile.value == '') {
     alert('Type or paste a link')
-    }
-  
- fetch(api + linkInputMobile.value)
- .then(res => res.json())
-   .then(data => {
-    const link = data?.result.short_link3
+  }
 
-    const stringM = String(linkInputMobile.value).slice(0, 20)
+  fetch(api + linkInputMobile.value)
+    .then(res => res.json())
+    .then(data => {
+      const link = data?.result.short_link3
+
+      const stringM = String(linkInputMobile.value).slice(0, 20)
 
 
-     
-        wrapperLinks.innerHTML+=`
+
+      wrapperLinks.innerHTML += `
         <div class="link-container">
         <a class='link-item' href=${linkInputMobile.value}> ${stringM}</a>
           <div class="DivResult">
@@ -76,5 +76,5 @@ function shorteningLinkMobile() {
           </div>
         </div>
         `
-     })
+    })
 }
